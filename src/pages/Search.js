@@ -36,5 +36,5 @@ const Search = (props) => {
             {!loading ? news.length !== 0 ? <FullWidthGrid data={news} /> : 'no hay noticias para tu busqueda' : <GridSkeleton />}
         </Layout>
     );
-}
+};
 export default Search;

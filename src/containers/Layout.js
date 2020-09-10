@@ -2,6 +2,7 @@ import React from 'react';
 import SearchAppBar from '../components/SearchAppBar';
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import RandomShow from '../components/RandomShow';
 
 const Layout = ({ children ,loading}) => {
     const useStyles = makeStyles((theme) => ({
@@ -15,6 +16,7 @@ const Layout = ({ children ,loading}) => {
 
     return (
         <>
+            <RandomShow/>
             <SearchAppBar />
             {loading && <LinearProgress color="secondary" />}
             <div className="inner">

@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 });
 
 export default function ImgMediaCard(props) {
-    const { category, date, img_url, source_id, source_name, title, url,} = props.data
+    const { category, date, img_url, source_id, source_name, title, url,} = props.data;
     const classes = useStyles();
     const img = img_url ? img_url : '/warningeva.jpg';
     return (
@@ -53,4 +53,4 @@ export default function ImgMediaCard(props) {
             </CardActions>
         </Card>
     );
-}
+};

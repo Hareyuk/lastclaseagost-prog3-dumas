@@ -94,6 +94,6 @@ const SearchAppBar = (props) => {
             </AppBar>
         </div>
     );
-}
+};
 
 export default withRouter(SearchAppBar);
