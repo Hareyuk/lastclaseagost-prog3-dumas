@@ -81,7 +81,7 @@ const SearchAppBar = (props) => {
                             <SearchIcon />
                         </div>
                         <InputBase
-                            onKeyPress={(event) => event.key === 'Enter' ? props.history.push(`/search/${event.target.value}`) : null}
+                            onKeyPress={(event) => event.key === 'Enter' && event.target.value !== "" ? props.history.push(`/search/${event.target.value}`) : null}
                             placeholder="Search…"
                             classes={{
                                 root: classes.inputRoot,
