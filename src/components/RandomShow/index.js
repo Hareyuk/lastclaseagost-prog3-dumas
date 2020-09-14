@@ -36,7 +36,7 @@ const RandomShow = ()=>
     return(
         <div className="randomParent">
             <div className="randomShow">
-                    {!loading ? (<div><p>Serie random: {showRandom.name} </p><p>Estado de emisión: {(showRandom.status === "Ended" ? "Finalizado" : "En emisión")}</p> <div><img src={showRandom.image_thumbnail_path} alt={showRandom.name}></img></div></div>) : <div> <p>Recibiendo datos...</p> </div>}
+                    {!loading ? (<div><p>Serie random: {showRandom.name} </p><p>Estado de emisión: {(showRandom.status === "Ended" ? "Finalizado" : "En emisión")}</p> <div><img src={showRandom.image_thumbnail_path} alt={showRandom.name}></img></div></div>) : <div> <p>Recibiendo datos...</p> <img src='./img/loadingImg.gif' alt='loading'/></div>}
             </div>
         </div>
     )

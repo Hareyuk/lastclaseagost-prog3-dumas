@@ -7,6 +7,7 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import { withRouter } from 'react-router-dom';
 import SimpleMenu from '../SimpleMenu';
+import Drawer from '../Drawer';
 
 const useStyles = makeStyles((theme) => (
     
@@ -72,7 +73,8 @@ const SearchAppBar = (props) => {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <SimpleMenu/>
+                    {/* <SimpleMenu/> */}
+                    <Drawer/>
                         <Typography className={classes.title} variant="h6" noWrap>
                         Lo nuevo de Maimo uwu
                     </Typography>

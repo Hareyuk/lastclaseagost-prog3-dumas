@@ -1,10 +1,14 @@
-.randomShow
+.randomParent
 {
-  width: 200px;
-  position: absolute;
-  left: 0;
-  background-color: black;
-  opacity: 0.4;
+  max-width: 1920px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .randomShow div
@@ -19,17 +23,15 @@
     margin: 0 auto;
 }
 
-.randomParent
+.randomShow
 {
-    max-width: 1920px;
-    width: 100%;
-    position: fixed;
+    pointer-events: visible;
+    width: 200px;
+    background-color: rgba(0,0,0,0.25);
+    filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.5));
+    position: absolute;
     top: 12%;
-    left: 50%;
-    transform: translate(-50%,0);
-    -o-transform: translate(-50%,0);
-    -webkit-transform: translate(-50%,0);
-    -moz-transform: translate(-50%,0);
+    left: 0;
     animation-iteration-count: infinite;
     -o-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
@@ -43,33 +45,84 @@
     -o-animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
     animation-name: movingVertical;
+    -webkit-animation-name: movingVertical;
+    -o-animation-name: movingVertical;
+    -moz-animation-name: movingVertical;
 }
 
 @keyframes movingVertical
 {
     0%
     {
-        top: 12%;
+        top: 15%;
     }
 
     50%
     {
-        top: 15%;
+        top: 12%;
     }
 
     100%
     {
-        top: 12%;
+        top: 15%;
     }
 }
 
 @media only screen and (max-width: 1600px)
 {
-    .randomParent
+    .randomShow
     {
-        display: none;
+        animation-fill-mode: forwards;
+        -o-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        -o-animation-iteration-count: 1;
+        -webkit-animation-iteration-count: 1;
+        -moz-animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        -moz-animation-timing-function: ease-out;
+        -o-animation-timing-function: ease-out;
+        -webkit-animation-timing-function: ease-out;
+        animation-name: entering;
+        -webkit-animation-name: entering;
+        -o-animation-name: entering;
+        -moz-animation-name: entering;
+        animation-duration: 0.5s;
+        -moz-animation-duration: 0.5s;
+        -o-animation-duration: 0.5s;
+        -webkit-animation-duration: 0.5s;
+        bottom: 5em;
+        top: unset;
+        left: 100%;
+    }
+
+    .randomShow:hover
+    {
+        opacity: 0.5;
     }
 } 
+
+@media only screen and (max-width: 420px)
+{
+    .randomShow
+    {
+        bottom: 1em !important;
+    }
+}
+
+@keyframes entering
+{
+    0%
+    {
+        left: 100%;
+    }
+
+    100%
+    {
+        left: calc(100% - 220px);
+    }
+}
 
 
 @media only screen and (min-width: 1800px)
@@ -78,4 +131,4 @@
     {
         width: 300px;
     }
-} 
+}
