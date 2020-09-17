@@ -8,6 +8,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import { withRouter } from 'react-router-dom';
 import SimpleMenu from '../SimpleMenu';
 import Drawer from '../Drawer';
+import Weather from '../Weather';
 
 const useStyles = makeStyles((theme) => (
     
@@ -78,6 +79,7 @@ const SearchAppBar = (props) => {
                         <Typography className={classes.title} variant="h6" noWrap>
                         Lo nuevo de Maimo uwu
                     </Typography>
+                    <Weather/>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />
