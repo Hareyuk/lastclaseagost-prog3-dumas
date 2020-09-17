@@ -15,7 +15,7 @@ const Weather = ()=>
                 {
                     const {latitude, longitude} = position.coords;    
                     const apiKey = "9f42cfac504e902e729390351ddcef0b";
-                    const ApiUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+                    const ApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
                     const response = await axios.get(ApiUrl);
                     const data = await response.data;
                     const celsius = (data.main.temp - 273.15).toFixed(2);
